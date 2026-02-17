@@ -8,11 +8,12 @@
 
 <body>
 
-  <div class="topnav">
-    <a class="active" href="#">Home</a>
-    <a href="#">Contact</a>
-    <a href="#">About</a>
-  </div>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+  
 
   <header>
     <h1>
