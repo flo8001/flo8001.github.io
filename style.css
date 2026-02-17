@@ -43,3 +43,11 @@ main {
   text-align: center;
   padding: 20px;
 }
+.profile-pic {
+  width: 200px;          /* adjust size */
+  height: 200px;         /* must match width for perfect circle */
+  border-radius: 50%;    /* makes it circular */
+  object-fit: cover;     /* prevents stretching */
+  border: 4px solid #04AA6D;  /* optional colored frame */
+}
+
