@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+.topnav {
+  background-color: #222;
+  overflow: hidden;
+  text-align: center;
+}
+
+.topnav a {
+  display: inline-block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #575757;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profile-img {
+  width: 80px;
+  vertical-align: middle;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+/* Main content */
+main {
+  text-align: center;
+  padding: 20px;
+}
