@@ -53,23 +53,25 @@ main {
 
 .topnav {
   display: flex;
-  align-items: center;     /* vertically centers logo + links */
+  align-items: center;        /* keeps everything vertically centered */
   background-color: #222;
-  padding: 10px 20px;
+  padding: 0 20px;            /* remove tall padding */
+  height: 60px;               /* control navbar height */
 }
 
 .logo {
-  width: 60px;
+  height: 40px;               /* THIS controls size */
+  width: auto;                /* keeps proportions */
   margin-right: 20px;
 }
 
-.nav-links a {
+.topnav a {
   color: white;
   text-decoration: none;
   margin-right: 20px;
+  line-height: 60px;          /* aligns text vertically */
 }
 
-.nav-links a:hover {
+.topnav a:hover {
   color: #04AA6D;
 }
-
