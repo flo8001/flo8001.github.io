@@ -51,27 +51,5 @@ main {
   border: 4px solid #04AA6D;  /* optional colored frame */
 }
 
-.topnav {
-  display: flex;
-  align-items: center;        /* keeps everything vertically centered */
-  background-color: #222;
-  padding: 0 20px;            /* remove tall padding */
-  height: 60px;               /* control navbar height */
-}
-
-.logo {
-  height: 40px;               /* THIS controls size */
-  width: auto;                /* keeps proportions */
-  margin-right: 20px;
-}
-
-.topnav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
-  line-height: 60px;          /* aligns text vertically */
-}
-
-.topnav a:hover {
   color: #04AA6D;
 }
