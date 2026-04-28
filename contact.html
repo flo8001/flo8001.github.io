@@ -4,61 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Florence Li</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px; color: #333; background: #fff; padding-top: 56px;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; height: 56px;
+      background: #222; display: flex; align-items: center;
+      justify-content: space-between; padding: 0 32px; z-index: 1000;
+    }
+    nav .brand { color: #fff; font-size: 18px; font-weight: bold; text-decoration: none; }
+    nav .links a { color: #bbb; text-decoration: none; margin-left: 24px; font-size: 14px; }
+    nav .links a:hover, nav .links a.active { color: #fff; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+    .card {
+      background: #f9f9f9; border: 1px solid #e0e0e0;
+      border-radius: 4px; padding: 20px 24px; margin-bottom: 20px;
+      max-width: 600px;
+    }
+    .card h3 {
+      font-size: 17px; font-weight: bold; margin-bottom: 12px;
+      padding-bottom: 8px; border-bottom: 1px solid #ddd; color: #222;
+    }
+    .card p { line-height: 1.9; margin-bottom: 6px; }
+    a { color: #337ab7; }
+    a:hover { color: #23527c; text-decoration: underline; }
+    footer {
+      margin-top: 20px; padding: 14px 32px; background: #f5f5f5;
+      border-top: 1px solid #ddd; display: flex;
+      justify-content: space-between; font-size: 13px; color: #888;
+    }
+    footer a { color: #666; }
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Florence Li</a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="active"><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+<nav>
+  <a class="brand" href="index.html">Florence Li</a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
   </div>
 </nav>
 
-<div id="contactid" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="well">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:email">email</a></p>
-        <p>
-          Department of Ecology and Evolutionary Biology<br>
-          University of California, Los Angeles<br>
-          Los Angeles, CA
-        </p>
-      </div>
-    </div>
+<div class="container">
+  <div class="card">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:email">email</a></p>
+    <p>Department of Ecology and Evolutionary Biology<br>
+       University of California, Los Angeles<br>
+       Los Angeles, CA</p>
   </div>
 </div>
 
-<div id="footer" class="panel">
-  <div class="panel-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6"><p>&copy; Florence Li 2026</p></div>
-        <div class="col-sm-6">
-          <p class="text-right">Template adapted from <a href="https://github.com/mpa139/allanlab" target="_blank">Allan Lab</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<footer>
+  <span>&copy; Florence Li 2026</span>
+  <span>Template adapted from <a href="https://github.com/mpa139/allanlab" target="_blank">Allan Lab</a></span>
+</footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
