@@ -4,82 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Florence Li</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #333;
+      background: #fff;
+      padding-top: 56px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      z-index: 1000;
+    }
+    nav .brand {
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav .links a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+    nav .links a:hover, nav .links a.active {
+      color: #fff;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    /* CARDS */
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+      color: #222;
+    }
+    .card p { line-height: 1.7; margin-bottom: 8px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* IMAGE */
+    .hero-img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 4px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* NEWS items */
+    .news-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #eee; }
+    .news-item:last-child { border-bottom: none; margin-bottom: 0; }
+    .news-date { font-weight: bold; font-size: 13px; color: #555; }
+
+    a { color: #337ab7; }
+    a:hover { color: #23527c; text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 20px;
+      padding: 14px 32px;
+      background: #f5f5f5;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #888;
+    }
+    footer a { color: #666; }
+
+    @media (max-width: 700px) {
+      .container { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Florence Li</a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+<nav>
+  <a class="brand" href="index.html">Florence Li</a>
+  <div class="links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<div id="homeid" class="container-fluid">
-  <div class="row">
-
-    <div class="col-sm-8">
-      <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="images/me.jpg" style="max-height:400px; width:100%; object-fit:cover; object-position: top;">
-          </div>
-        </div>
-      </div>
-
-      <div class="well">
-        <p>Welcome! I am an evolutionary biologist at UCLA studying fish macroevolution.
-           I am currently updating the <a href="https://fishtreeoflife.org/" target="_blank">Fish Tree of Life</a> with the <a href="https://michaelalfaro.github.io/alfaro-lab/" target="_blank">Alfaro Lab</a> to examine the evolution of color pattern across Actinopterygii.</p>
-        <p>My research uses large-scale phylogenomic approaches — including ultraconserved elements (UCEs) harvested from over 200 fish genomes — to build a backbone phylogeny of ray-finned fishes.</p>
-      </div>
+<div class="container">
+  <div class="main-col">
+    <img src="images/me.jpg" alt="Florence Li" class="hero-img">
+    <div class="card">
+      <p>Welcome! I am an evolutionary biologist at UCLA studying fish macroevolution.
+         I am currently updating the <a href="https://fishtreeoflife.org/" target="_blank">Fish Tree of Life</a>
+         with the <a href="https://michaelalfaro.github.io/alfaro-lab/" target="_blank">Alfaro Lab</a>
+         to examine the evolution of color pattern across Actinopterygii.</p>
+      <p>My research uses large-scale phylogenomic approaches — including ultraconserved elements (UCEs)
+         harvested from over 200 fish genomes — to build a backbone phylogeny of ray-finned fishes.</p>
     </div>
-
-    <div class="col-sm-4">
-      <div class="well">
-        <h4>News</h4>
-        <p><b>April 2026</b><br>UCE backbone analysis underway — 4,271 deduplicated loci identified across 210 fish genomes.</p>
-        <p><b>2025</b><br>Joined Alfaro Lab at UCLA.</p>
-      </div>
-      <div class="well">
-        <h4>Affiliations</h4>
-        <p>
-          <a href="https://michaelalfaro.github.io/alfaro-lab/" target="_blank">Alfaro Lab, UCLA</a><br>
-          <a href="https://fishtreeoflife.org/" target="_blank">Fish Tree of Life</a>
-        </p>
-      </div>
-    </div>
-
   </div>
-</div>
 
-<div id="footer" class="panel">
-  <div class="panel-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6"><p>&copy; Florence Li 2026</p></div>
-        <div class="col-sm-6">
-          <p class="text-right">Template adapted from <a href="https://github.com/mpa139/allanlab" target="_blank">Allan Lab</a></p>
-        </div>
+  <div class="side-col">
+    <div class="card">
+      <h3>News</h3>
+      <div class="news-item">
+        <div class="news-date">April 2026</div>
+        <p>UCE backbone analysis underway — 4,271 deduplicated loci identified across 210 fish genomes.</p>
       </div>
+      <div class="news-item">
+        <div class="news-date">2025</div>
+        <p>Joined Alfaro Lab at UCLA.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Affiliations</h3>
+      <p><a href="https://michaelalfaro.github.io/alfaro-lab/" target="_blank">Alfaro Lab, UCLA</a></p>
+      <p><a href="https://fishtreeoflife.org/" target="_blank">Fish Tree of Life</a></p>
     </div>
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<footer>
+  <span>&copy; Florence Li 2026</span>
+  <span>Template adapted from <a href="https://github.com/mpa139/allanlab" target="_blank">Allan Lab</a></span>
+</footer>
+
 </body>
 </html>
